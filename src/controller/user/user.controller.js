@@ -1,5 +1,5 @@
 const userModel = require("../../model/user/user.model");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 module.exports = UserController = {
   registerUser: async (req, res) => {
     const isExist = await userModel.findOne({ email: req.body.email });
