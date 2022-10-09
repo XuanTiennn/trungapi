@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "env": {
+      "MONGO_URL": "mongodb+srv://tientx:tien2000@cluster0.kttq3e1.mongodb.net/?retryWrites=true&w=majority"
+
+    },
+    "builds": [
+      {
+        "src": "src/index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "src/index.js",
+        "methods": ["GET", "POST", "PUT", "DELETE"]
+      }
+    ]
+  }
